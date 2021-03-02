@@ -6,7 +6,9 @@
 	"scripts": {
 		"start": "tsc && node dist/server.js",
 		"watch-ts": "tsc -w",
-		"build-ts": "tsc "
+		"build-ts": "tsc ",
+		"tsc": "tsc",
+		"postinstall": "npm run tsc"
 	},
 	"keywords": [],
 	"author": "@ace_mirr",
