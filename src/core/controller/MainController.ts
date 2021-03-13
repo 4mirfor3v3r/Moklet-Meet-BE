@@ -2,6 +2,7 @@ import { MainWorker } from './../worker/MainWorker';
 import { IMeet } from './../model/Meet';
 import { IController } from './../shared/IController';
 import express from 'express';
+import { randomInt } from 'crypto';
 export class MainController implements IController {
 	path = '/meet';
 	router = express.Router();
@@ -20,18 +21,17 @@ export class MainController implements IController {
 		return res.send(this._worker.ping());
 	};
 	private insert = (req: express.Request, res: express.Response) => {
-		var name = req.body.name;
-		var creator = req.body.creator;
-		var url = req.body.url;
-		var startDate = req.body.start_date;
-		var endDate = req.body.end_date;
-
+		var name:string = req.body.name;
+		var creator:string = req.body.creator;
+		var startDate:Date = req.body.start_date;
+		var endDate:Date = req.body.end_date;
+		
 		var data: IMeet = {
 			name: name,
 			creator: creator,
-			url: url,
+			url: `"https://meet.jit.si/mm-${name.replace(/\s/g, '')}-${randomInt(1000).toString()}"`,
 			start_date: startDate,
-			end_date: endDate
+			end_date: endDate,
 		};
 
 		return this._worker
