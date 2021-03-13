@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MainController = void 0;
 const MainWorker_1 = require("./../worker/MainWorker");
 const express_1 = __importDefault(require("express"));
+const crypto_1 = require("crypto");
 class MainController {
     constructor() {
         this.path = '/meet';
@@ -16,15 +17,14 @@ class MainController {
         this.insert = (req, res) => {
             var name = req.body.name;
             var creator = req.body.creator;
-            var url = req.body.url;
             var startDate = req.body.start_date;
             var endDate = req.body.end_date;
             var data = {
                 name: name,
                 creator: creator,
-                url: url,
+                url: `"https://meet.jit.si/mm-${name.replace(/\s/g, '')}-${crypto_1.randomInt(1000).toString()}"`,
                 start_date: startDate,
-                end_date: endDate
+                end_date: endDate,
             };
             return this._worker
                 .insertNewMeet(data)
