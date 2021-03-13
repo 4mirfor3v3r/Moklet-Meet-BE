@@ -22,7 +22,7 @@ class MainController {
             var data = {
                 name: name,
                 creator: creator,
-                url: `"https://meet.jit.si/mm-${crypto_1.randomInt(1000).toString()}"`,
+                url: `https://meet.jit.si/mm-${crypto_1.randomInt(1000).toString()}`,
                 start_date: startDate,
                 end_date: endDate,
             };

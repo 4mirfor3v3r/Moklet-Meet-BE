@@ -29,7 +29,7 @@ export class MainController implements IController {
 		var data: IMeet = {
 			name: name,
 			creator: creator,
-			url: `"https://meet.jit.si/mm-${randomInt(1000).toString()}"`,
+			url: `https://meet.jit.si/mm-${randomInt(1000).toString()}`,
 			start_date: startDate,
 			end_date: endDate,
 		};
