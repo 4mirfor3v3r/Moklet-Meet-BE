@@ -1,7 +1,7 @@
 {
-	"name": "Project_Work",
+	"name": "Moklet meet BE",
 	"version": "1.0.0",
-	"description": "Proyek Kelas 12",
+	"description": "Simple Meet Apps",
 	"main": "dist/server.js",
 	"scripts": {
 		"start": "node dist/server.js",

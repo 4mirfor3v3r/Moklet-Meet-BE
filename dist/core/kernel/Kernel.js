@@ -9,7 +9,7 @@ const express_1 = __importDefault(require("express"));
 const port = process.env.PORT || 19003;
 class Kernel {
     constructor() {
-        this._defaultApps = express_1.default();
+        this._defaultApps = (0, express_1.default)();
         this._defaultAppUse = new Kernel_App_Use_1.AppUse(this._defaultApps);
     }
     appService() {

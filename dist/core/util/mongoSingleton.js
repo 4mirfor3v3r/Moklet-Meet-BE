@@ -7,8 +7,7 @@ exports.MongoSingleton = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 class MongoSingleton {
     constructor() {
-        this._dbUrl =
-            'mongodb://jelajah-rasa:Z7qYFMa6NqMweiTq@kotlin-rest-api-shard-00-00.7khep.mongodb.net:27017,kotlin-rest-api-shard-00-01.7khep.mongodb.net:27017,kotlin-rest-api-shard-00-02.7khep.mongodb.net:27017/dbJitsiMeet?ssl=true&replicaSet=Kotlin-rest-api-shard-0&authSource=admin&retryWrites=true&w=majority';
+        this._dbUrl = "mongodb+srv://public:public@amirlabs-db.nahxg.mongodb.net/dbJitsiMeet?retryWrites=true&w=majority";
     }
     connect() {
         mongoose_1.default.set('debug', true);
