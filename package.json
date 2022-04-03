@@ -1,7 +1,7 @@
 {
 	"name": "Moklet meet BE",
 	"version": "1.0.0",
-	"description": "Simple Meet Apps",
+	"description": "Simple Moklet-Meet Apps",
 	"main": "dist/server.js",
 	"scripts": {
 		"start": "node dist/server.js",
@@ -11,7 +11,7 @@
 		"postinstall": "npm run tsc"
 	},
 	"keywords": [],
-	"author": "@ace_mirr",
+	"author": "@amirlabs",
 	"license": "ISC",
 	"devDependencies": {
 		"@types/body-parser": "^1.19.0",
